@@ -13,6 +13,12 @@ mkdir -p ~/.codex/skills
 git clone https://github.com/nishirajmane/nifty-options-scalp.git ~/.codex/skills/nifty-options-scalp
 ```
 
+If you installed by cloning, update it later with:
+
+```bash
+git -C ~/.codex/skills/nifty-options-scalp pull --ff-only
+```
+
 Then open a Codex chat and invoke the skill by name:
 
 ```text
