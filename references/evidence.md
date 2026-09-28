@@ -1,0 +1,13 @@
+# Evidence and validation
+
+The originating review was made on 28 September 2026 from a live Zerodha NIFTY 50 chart. The 5- and 15-minute views showed a falling sequence into 22,780.25. Session OHLC was 23,064.90 / 23,080.25 / 22,762.20 / 22,780.25. The 09:15–09:30 range in an independent 5-minute data feed was approximately 23,079.75–22,905.25. This is context, not a reusable future level.
+
+The NSE Indices historical page displays daily NIFTY records from the 3 November 1995 base date. A separate review of 6,642 daily rows from 3 January 2000 through 28 September 2026 combined an openly published 2000–2007 CSV with Yahoo Finance daily index data afterward. Median daily high-low range was 1.25% of previous close; the 90th percentile was 2.89%. These are descriptive and do not measure a scalp's expectancy.
+
+A diagnostic using the latest available 5-minute spot data (31 July–28 September 2026) had 41 complete sessions. A simpler first opening-range break rule produced 38 signals and only +0.054R mean gross result before option premium behavior, spreads, fees, and slippage. It was **not** the retest setup above and does **not** validate it. No complete historical minute-level NIFTY option bid/ask series was available in this review. Do not claim this skill has a positive tested edge.
+
+Before treating the candidate as live-ready, backtest point-in-time NIFTY spot and actual option contract quotes across multiple market regimes. Use the historical expiry calendar, lot sizes, bid/ask fills, brokerage, STT, exchange fees, GST, stamp duty, and slippage. Fix the rules before an out-of-sample period; report trade count, net expectancy in R, hit rate, drawdown, costs, and sensitivity to worse fills. Paper trade afterward and compare actual fills against assumptions.
+
+Primary sources to recheck: [NSE Indices history](https://www.niftyindices.com/reports/historical-data), [NSE contract specifications](https://www.nseindia.com/static/products-services/equity-derivatives-contract-specifications), [NSE market timings](https://www.nseindia.com/static/market-data/market-timings), [Zerodha charges](https://zerodha.com/charges), and [SEBI F&O profitability research](https://www.sebi.gov.in/reports-and-statistics/research/aug-2026/study-profitability-of-individual-traders-in-the-equity-derivatives-segment-fy25-fy26-_103835.html).
+
+The non-exchange historical inputs in the descriptive scan were [the 2000-era CSV](https://github.com/VatsalSin/Stock-Market-Indices-Dataset/blob/main/NIFTY%2050.csv) and [Yahoo Finance's NIFTY index series](https://finance.yahoo.com/quote/%5ENSEI/history/). Check any future analysis against exchange data where possible.

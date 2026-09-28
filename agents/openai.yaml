@@ -1,0 +1,3 @@
+interface:
+  display_name: "Nifty Options Scalp"
+  short_description: "Plan NIFTY call and put scalps from intraday charts"
