@@ -49,6 +49,8 @@ On **28 September 2026**, NIFTY fell below its 09:15–09:30 opening-range low a
 
 ## Evidence and limits
 
+The [29 September 2026 backtest audit](references/backtest-audit-2026-09-29.md) records the recent 5-minute spot signal scan and the limits found in free options replay tools. It includes a [reproducible scan script](scripts/spot_signal_audit.py). The option strategy remains unvalidated.
+
 The [evidence note](references/evidence.md) records the chart review and data sources. The descriptive scan covered **6,642 daily NIFTY rows from 2000–2026**. A recent 5-minute **spot-index** diagnostic covered 41 complete sessions each for NIFTY and BANKNIFTY. Its simpler opening-range-break rule was **not** the retest strategy in this skill. Neither dataset contains the historical option bid/ask fills needed to establish after-cost performance. In that short window, BANKNIFTY's median opening range was **0.425%** of its open versus **0.288%** for NIFTY; this supports separate volatility normalization, not a claim that either strategy works.
 
 Before anyone calls the setup validated, test it separately on point-in-time NIFTY and BANKNIFTY spot and option quotes, with historical expiries, lot sizes, transaction charges, taxes, spread, and slippage. Fix the rules before an out-of-sample test, then report net expectancy, trade count, drawdown, and sensitivity to worse fills. Exchange rules and charges should be checked again when used; see [NSE contract specifications](https://www.nseindia.com/static/products-services/equity-derivatives-contract-specifications), [NSE market timings](https://www.nseindia.com/static/market-data/market-timings), and [Zerodha charges](https://zerodha.com/charges).
@@ -59,7 +61,9 @@ Before anyone calls the setup validated, test it separately on point-in-time NIF
 SKILL.md                 Codex instructions and the full candidate setup
 agents/openai.yaml       Skill display metadata
 references/evidence.md   Source data, observed results, and validation limits
+references/backtest-audit-2026-09-29.md  Recent retest scan and platform checks
 references/indicators.md Indicator choices and other market/option factors
+scripts/spot_signal_audit.py          Reproducible recent spot-index scan
 CONTRIBUTING.md          How to propose a change
 ```
 

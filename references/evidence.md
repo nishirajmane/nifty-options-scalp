@@ -1,5 +1,7 @@
 # Evidence and validation
 
+The [29 September 2026 backtest audit](backtest-audit-2026-09-29.md) checked the published retest entry rule on recent 5-minute NIFTY and BANKNIFTY spot data and attempted signed-in free-site option replays. It found four intrabar trigger candidates per index across 40 complete sessions each. The available free tools did not produce a faithful, after-cost option backtest. The [spot signal audit script](../scripts/spot_signal_audit.py) reproduces the index scan while the data provider retains those 5-minute candles. The candidate strategy remains unvalidated.
+
 The originating review was made on 28 September 2026 from a live Zerodha NIFTY 50 chart. The 5- and 15-minute views showed a falling sequence into 22,780.25. Session OHLC was 23,064.90 / 23,080.25 / 22,762.20 / 22,780.25. The 09:15–09:30 range in an independent 5-minute data feed was approximately 23,079.75–22,905.25. This is context, not a reusable future level.
 
 The NSE Indices historical page displays daily NIFTY records from the 3 November 1995 base date. A separate review of 6,642 daily rows from 3 January 2000 through 28 September 2026 combined an openly published 2000–2007 CSV with Yahoo Finance daily index data afterward. Median daily high-low range was 1.25% of previous close; the 90th percentile was 2.89%. These are descriptive and do not measure a scalp's expectancy.
